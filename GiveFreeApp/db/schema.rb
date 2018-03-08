@@ -15,14 +15,22 @@ ActiveRecord::Schema.define(version: 20180307123549) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "charity", force: :cascade do |t|
+  create_table "charities", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "rating"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_charities_on_user_id"
   end
 
-  create_table "income", force: :cascade do |t|
+  create_table "incomes", force: :cascade do |t|
+    t.float "amount"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_incomes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

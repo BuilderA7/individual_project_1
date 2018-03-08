@@ -1,0 +1,15 @@
+  <%= form_for @fleet do |form| %>
+  <ul>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div class = "field">
+    <%= form.label :region %>
+    <%= form.text_field :region %>
+  </div> 
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
