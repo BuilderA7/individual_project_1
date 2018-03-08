@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 root to: "home#index"
   devise_for :users
-  resources :charity    
+  resources :charities    
   resources :users do 
     resources :incomes
   end

@@ -1,0 +1,19 @@
+  <%= form_for @fleet do |form| %>
+ 
+  <div class = "field">
+    <%= form.label :region %>
+    <%= form.text_field :region %>
+  </div> 
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %> 
+
+<form class="navbar-form navbar-left">
+          <%= form_tag (controller: "layout_controller", action: "show", method: "get"  do |form| %>
+          <%= form.label :region %>
+          <%= form.text_field :region %>
+          <%= form.submit %>
+          <% end %>
+      </form>

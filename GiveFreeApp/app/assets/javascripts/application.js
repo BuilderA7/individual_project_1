@@ -13,4 +13,8 @@
 //= require rails-ujs
 //= require jquery3
 //= require bootstrap
-//= require_tree .
+//= require_tree 
+//= require d3
+//= require chartkick
+//= require Chart.bundle
+//= require chartkick
