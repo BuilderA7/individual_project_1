@@ -1,0 +1,22 @@
+  <%if current_user.id != nil%>
+    <%= form_for new_user_income_path(user_id: @user) do |t|%>
+
+    <div>
+    <%= t.label :salary%>
+    <%= t.text_field :income%>
+    </div><br>
+
+    <div>
+    <%= t.label :state%>
+    <%= t.text_field :state%>
+    </div><br>
+    <div class="actions">
+    <%= t.submit  %>
+    </div>
+    <% end %>
+   <%else%>
+   Please Sign up to see what you can GiveFree!
+    <br>
+    <a href="/users/sign_up"><h3>Signup</h3></a>
+
+   <%end%>

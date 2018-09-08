@@ -15,6 +15,5 @@
 //= require bootstrap
 //= require_tree 
 //= require d3
-//= require chartkick
 //= require Chart.bundle
 //= require chartkick

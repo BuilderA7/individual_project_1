@@ -1,10 +1,11 @@
+
 class HomeController < ApplicationController
-   # before_action :set_home, only: [:show, :edit, :update, :destroy]
+    before_action :logged_in, only: [:show, :edit, :update, :destroy, :index]
+      before_action :searcher, only: [:show, :edit, :update, :destroy, :index]
 
+  def index
 
-  # def index
-  #   @homes = Home.all
-  # end
+  end
 
   # def show
   # end
@@ -32,10 +33,22 @@ class HomeController < ApplicationController
   #   @home.destroy
   # end
 
-  # private
-  #   def set_home
-  #     @home = home.find(params[:id])
-  #   end
+  private
+
+
+  def looged_in
+    if current_user == " "
+      @logged_in = false
+    end
+  end
+
+  def searcher 
+    @charity_search = params[:charity_search]
+    if  @charity_search
+    redirect_to charities_path
+    end
+  end
+
 
   #   def home_params
   #     params.fetch(:home, {})

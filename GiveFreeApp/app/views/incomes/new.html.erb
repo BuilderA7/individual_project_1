@@ -1,0 +1,26 @@
+<script src="https://d3js.org/d3.v4.min.js"></script>
+ <%= form_tag(new_user_income_path, :method => "get") do %>
+ <div >
+   <%= text_field_tag :amount, @amount = params[:amount], placeholder: "Enter your Income" %>
+ </div>
+ <div>
+   <%= text_field_tag :status, params[:status], placeholder: "Single,Married,Student" %>
+ </div>
+ <div>
+  <%if @amount && @status %>
+    <h4>You can GiveFree:  approx. $<%= @Contribution%> </h4>
+    <h4>Metadata:  <%= @amount.to_f  - @b%> </h4>
+    <h4>Metadata:  <%= @tax_brackets[1]%> </h4>
+    <h4>Metadata:  <%= @b%> </h4>
+    <h4>Metadata:  <%= @married_liability%> </h4>
+  <%end%>
+ </div><br>
+ <div class="actions">
+  <%= submit_tag "Calculate Contribution", :name => nil %>
+ </div>
+ <%end%>
+ <%if @amount && @gift%>
+ <%= pie_chart [["income", @amount ], ["GiveFree", @gift]] %>
+ <%end%>
+
+  

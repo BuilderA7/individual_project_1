@@ -1,8 +1,7 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <!DOCTYPE html>
 <meta charset="utf-8">
-<%= pie_chart({"" => 10, "Basketball" => 5}) %>
-<%= pie_chart [["Football", 10], ["Basketball", 5]] %>
+
 <p>
   <strong>Name:</strong>
   <%= @charity.name %>
@@ -12,4 +11,4 @@
   <strong>Rating:</strong>
   <%= @charity.rating %>
 </p>
-
+<%= pie_chart [["Category", 100], ["Category", 0]] %>

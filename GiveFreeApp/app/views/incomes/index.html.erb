@@ -1,0 +1,25 @@
+<h3>Your Income Information</h3>
+Salary:
+<%= @user.income.first%>
+<%=if @user.status == 'single' %>
+<% @s = 0 %>
+<% end %>
+<%=if status == 'married' %>
+<% @s = 1 %>
+<% end %>
+<%=if status == 'head' %>
+<% @s = 2 %>
+<% end %>
+<%tax_bracket[@s][0].each_with_index do |t|%>
+<%if t[0] < @income 
+       p @b = i 
+    end
+  end
+  @contribution = (((@income - @tax_brackets[0][0][@b][0])*(@tax_brackets[0][0][@b][1])/100) + @single_liability[@b+1] * 0.1)%>
+contribution:
+<%= @contribution%>
+<%%>
+<%end%>
+
+<%c = Gift.new%>
+<%c.contribution(100000)%>

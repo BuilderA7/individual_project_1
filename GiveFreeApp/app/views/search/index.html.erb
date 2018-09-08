@@ -1,0 +1,28 @@
+<H1>Search Orgnizations</H1>
+
+
+  <%= form_tag(search_index_path, :method => "get") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Charities Data" %>
+  <%= submit_tag "Search", :name => nil %>
+  <% end %>
+
+Results(limit 100):
+    <% if @rawdata && @rawdata['organizations'].size > 0 %>
+    <%=@rawdata['total_results'] %><br><br>
+    <%number_of_elements = @rawdata['organizations'].size%>
+    <%= number_of_elements.times do |t| %>
+    Name:
+    <%= @rawdata["organizations"][t]["name"]%><br>
+    City:
+    <%=  @rawdata["organizations"][t]["city"]%><br><%=@rawdata["organizations"][t]["state"]%><br>
+    Score:
+    <%=  @rawdata["organizations"][t]["score"] %><br>
+    <br><br>
+        <%end%>
+    <%else%>
+    <h4>There Where No Results</h4>
+      <%end%>
+  
+
+
+
