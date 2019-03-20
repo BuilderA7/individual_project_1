@@ -62,7 +62,6 @@ def contribution(amount, status)
         @tax_brackets[0].each do |t,i|
           if t >  amount.to_f  
              @b = t
-    byebug
           end
         end
         @contribution = (((amount.to_f  - @b)*(@tax_brackets[0][@b])/100) + @single_liability[@b])* 0.1
@@ -77,7 +76,7 @@ def contribution(amount, status)
         @contribution = (((amount.to_f  - @b)*(@tax_brackets[1][@b])/100) + @married_liability[@b])*0.1
       end
     end
-    # @contribution = (((amount.first.amount  - @tax_brackets[0][0][@b][0])*(@tax_brackets[0][0][@b][1])/100) + @single_liability[@b+1] * 0.1)
+     # @contribution = (((amount.first.amount  - @tax_brackets[0][0][@b][0])*(@tax_brackets[0][0][@b][1])/100) + @single_liability[@b+1] * 0.1)
      # @contribution
   end
   private

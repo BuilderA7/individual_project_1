@@ -8,7 +8,7 @@
  </div>
  <div>
   <%if @amount && @status %>
-    <h4>You can GiveFree:  approx. $<%= @Contribution%> </h4>
+    <h4>You can GiveFree:  approx. $<%= @contribution%> </h4>
     <h4>Metadata:  <%= @amount.to_f  - @b%> </h4>
     <h4>Metadata:  <%= @tax_brackets[1]%> </h4>
     <h4>Metadata:  <%= @b%> </h4>
@@ -23,4 +23,4 @@
  <%= pie_chart [["income", @amount ], ["GiveFree", @gift]] %>
  <%end%>
 
-  
+    

@@ -1,5 +1,5 @@
 class Income < ApplicationRecord
-belongs_to :user
+belongs_to :user 
   
 def contribution
   
@@ -24,7 +24,7 @@ def contribution
       end
     end
     @contribution = (((amount - @tax_brackets[0][0][@b][0])*(@tax_brackets[0][0][@b][1])/100) + @single_liability[@b+1] * 0.1)
-    @contribution
+    # @contribution
   end
 end
 

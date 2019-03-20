@@ -12,6 +12,7 @@ gem "d3-rails"
 gem "byebug"
 gem 'chartkick'
 gem 'rails', '~> 5.1.5'
+gem 'rack'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -35,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
-gem 'devise'
+gem 'devise', '~> 4.6.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
